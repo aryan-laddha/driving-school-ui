@@ -38,39 +38,7 @@ function AdminDashboard() {
       <div className="max-w-7xl mx-auto">
         
         {/* Top Navbar */}
-        <div className="flex justify-between items-center mb-10">
-          <div className="flex items-center gap-3">
-            <div className="bg-indigo-600 p-2.5 rounded-xl text-white shadow-lg shadow-indigo-100">
-              <MdDashboard size={24} />
-            </div>
-            <div>
-              <h1 className="text-2xl font-black text-slate-800 tracking-tight leading-none">Admin Console</h1>
-              <p className="text-slate-400 text-xs font-bold mt-1 uppercase tracking-widest">Driving School Hub</p>
-            </div>
-          </div>
 
-          <div className="flex items-center gap-4">
-            <button 
-              onClick={() => navigate('/admin/users')}
-              className="relative p-2.5 bg-white border border-slate-200 rounded-xl text-slate-500 hover:text-indigo-600 hover:border-indigo-100 transition-all"
-            >
-              <MdNotificationsNone size={24} />
-              {pendingCount > 0 && (
-                <span className="absolute top-2 right-2 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-rose-500 border-2 border-white"></span>
-                </span>
-              )}
-            </button>
-            
-            <button 
-              onClick={handleLogout}
-              className="flex items-center gap-2 bg-white border border-slate-200 px-5 py-2.5 rounded-xl font-bold text-slate-600 hover:bg-rose-50 hover:text-rose-600 hover:border-rose-100 transition-all active:scale-95 shadow-sm"
-            >
-              <MdLogout /> <span className="hidden sm:inline">Logout</span>
-            </button>
-          </div>
-        </div>
 
         {/* 1. Quick Stats Section (Top Cards) */}
         <AdminQuickStats />
