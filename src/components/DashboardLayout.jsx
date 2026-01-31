@@ -115,7 +115,7 @@ function DashboardLayout({ role }) {
                         to={`/${role.toLowerCase()}/dashboard`}
                         className="text-xl font-extrabold text-indigo-700 hover:text-indigo-800 transition-colors"
                     >
-                        🚗 Welcome Driving School
+                        Welcome Driving School
                     </NavLink>
                 </div>
                 <div className="flex items-center space-x-4">
