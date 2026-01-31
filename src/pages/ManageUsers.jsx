@@ -149,7 +149,7 @@ function ManageUsers() {
         return setLoading(false);
     }
     try {
-      const response = await fetch(`${BASE_URL}/users`, {
+      const response = await fetch(`${USERS_URL}`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       const result = await response.json();
