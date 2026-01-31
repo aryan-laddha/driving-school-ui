@@ -41,7 +41,7 @@ function AddVehicleSidebar({ isOpen, onClose, onVehicleAdded, initialData }) {
     setLoading(true);
     const token = getToken();
     const vehicleNumber = isEditing ? initialData.vehicleNumber : formData.vehicleNumber;
-    
+
 
     let endpoint = isEditing ? `${VEHICLES_URL}/${vehicleNumber}` : VEHICLES_URL;
     let method = isEditing ? 'PUT' : 'POST';
@@ -179,10 +179,8 @@ function AddVehicleSidebar({ isOpen, onClose, onVehicleAdded, initialData }) {
               className="h-5 w-5 text-indigo-600 border-slate-300 rounded-lg focus:ring-indigo-500"
             />
           </label>
-        </form>
 
-        {/* Footer - Fixed at bottom */}
-        <div className="p-6 border-t border-slate-100 bg-slate-50/50">
+          <div className="p-6 border-t border-slate-100 bg-slate-50/50">
           <button
             type="submit"
             disabled={loading}
@@ -191,6 +189,11 @@ function AddVehicleSidebar({ isOpen, onClose, onVehicleAdded, initialData }) {
             {loading ? 'Processing...' : (isEditing ? 'Update Vehicle' : 'Register Vehicle')}
           </button>
         </div>
+        
+        </form>
+
+        {/* Footer - Fixed at bottom */}
+        
       </div>
     </>
   );
