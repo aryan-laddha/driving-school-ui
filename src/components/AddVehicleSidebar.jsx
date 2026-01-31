@@ -41,6 +41,7 @@ function AddVehicleSidebar({ isOpen, onClose, onVehicleAdded, initialData }) {
     setLoading(true);
     const token = getToken();
     const vehicleNumber = isEditing ? initialData.vehicleNumber : formData.vehicleNumber;
+    
 
     let endpoint = isEditing ? `${VEHICLES_URL}/${vehicleNumber}` : VEHICLES_URL;
     let method = isEditing ? 'PUT' : 'POST';
