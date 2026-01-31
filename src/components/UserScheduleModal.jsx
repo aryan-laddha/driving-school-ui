@@ -45,7 +45,7 @@ function UserScheduleModal({ user, onClose }) {
         const token = getToken();
 
         // Construct the API endpoint with the current date
-        const endpoint = `${SCHEDULE_URL}/instructor/${user.username}`;
+        const endpoint = `${SCHEDULES_URL}/instructor/${user.username}`;
         const params = new URLSearchParams({ date: dateString }).toString();
         const fullUrl = `${endpoint}?${params}`;
 
