@@ -45,7 +45,7 @@ function VehicleScheduleModal({ vehicle, onClose }) {
 
         // 1. Determine the endpoint using the requested structure: 
         // /vehicle/{vehicleNumber}?date=...
-        let endpoint = `${SCHEDULE_URL}/vehicle/${vehicle.vehicleNumber}`;
+        let endpoint = `${SCHEDULES_URL}/vehicle/${vehicle.vehicleNumber}`;
 
         // 2. Add the date query parameter
         const params = new URLSearchParams({ date: dateString }).toString();
