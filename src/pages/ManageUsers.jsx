@@ -17,7 +17,7 @@ import UserScheduleModal from '../components/UserScheduleModal';
 import { API_BASE, USERS_URL, VEHICLES_URL, COURSES_URL } from '../api/constants';
 
 
-const BASE_URL = '${API_BASE}/auth'; 
+const BASE_URL = `${API_BASE}/auth`; 
 
 // --- Tab definitions ---
 const TABS = {
